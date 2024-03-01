@@ -90,5 +90,3 @@ end
 
 p("Mapped hash-1 as array: #{mapped_h1}")
 puts("Mapped hash-1 converted to hash: #{mapped_h1.to_h()}")
-
-
