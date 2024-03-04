@@ -118,7 +118,7 @@ class Bank
 
     def menu
         
-        print("\nChoose the operaion to be done:\n1)Deposit\n2)Check Balance\n3)Quit\nEnter Your Choice: ")
+        print("\nChoose the operaion to be done:\n1)Deposit\n2)Withdrwal\n3)Check Balance\n4)Quit\nEnter Your Choice: ")
         choice = gets().chomp().to_i()
 
         puts()
@@ -126,8 +126,10 @@ class Bank
         when 1
             self.deposit
         when 2
-            self.check_balance(@usr)
+            self.withdrawl(@usr)
         when 3
+            self.check_balance(@usr)
+        when 4
             puts("Bye Bye!")
             return
         else
