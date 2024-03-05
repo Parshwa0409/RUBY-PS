@@ -27,8 +27,9 @@ def top_students(students, age, n)
 end
 
 def top_students_2(students, age, n)
-    puts students.select {|student| student[:age] > age }.sort { |a, b| b[:scores].reduce(:+) <=> a[:scores].reduce(:+) }[0,n]
+    results = students.select {|student| student[:age] > age }.sort { |a, b| b[:scores].reduce(:+) <=> a[:scores].reduce(:+) }
+    return results.length < n ? students : results[0,n]
 end
 
 
-top_students_2(students,14,4)
+puts top_students_2(students,14,4)
