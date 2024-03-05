@@ -8,13 +8,7 @@
 
 students = ["Parshwa", "Manikanta", "XYZ", "bcd", "fgh", "bbbbccccdddd", "bbbcccddd", "bbccdd", "pathiksha", "lezz"]
 
-students.select {|student| !student.match?(/[aeiouA-Z]+/)}.map!{|str|str.reverse!}.sort { |a, b| a.length <=> b.length }.each_with_index do |el, i|
-    if(i<3)
-        print "#{el}"
-    else
-        print " <> #{el}"
-    end
-end
+students.select {|student| !student.match?(/[aeiouA-Z]+/)}.map!{|str|str.reverse!}.sort { |a, b| a.length <=> b.length }.each_with_index {|el, i| print (i<3)? "#{el}": " <> #{el}"}
 
 # res.map! do |str|
 #     str.reverse!
